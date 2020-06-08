@@ -1,18 +1,12 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.time.LocalDateTime" %>
+<!DOCTYPE html>
 <html>
-<head><title>First JSP</title></head>
-<body>
-  <%
-    double num = Math.random();
-    if (num > 0.95) {
-  %>
-      <h2>You'll have a luck day!</h2><p>(<%= num %>)</p>
-  <%
-    } else {
-  %>
-      <h2>Well, life goes on ... </h2><p>(<%= num %>)</p>
-  <%
-    }
-  %>
-  <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
-</body>
+	<head>
+		<title>Simple JSP Application</title>
+	</head>
+	<body>
+		<h1>Hello world!</h1>
+		<h2>Current time is <%= LocalDateTime.now() %></h2>
+	</body>
 </html>
